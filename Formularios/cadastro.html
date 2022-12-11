@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form 
+    onsubmit="getValues(event)"
+  >
+    <label for="inNome">Nome:</label>
+    <input id="inNome" type="text" size="20" />
+    <br />
+
+    <label for="inNome">Sobrenome:</label>
+    <input id="inSobrenome" type="text" size="40" />
+    <br />
+
+    <label>Estado Civil: </label>
+    <label for="inEC2">Casado</label>
+    <input id="inEC2" name="inEC" type="radio" value="Casado" />
+    <label for="inEC1">Solteiro</label>
+    <input id="inEC1" name="inEC" type="radio" value="Solteiro" />
+    <label for="inEC3">Divorciado</label>
+    <input id="inEC3" name="inEC" type="radio" value="Divorciado" />
+    <br />
+
+    <label>Habilidade: </label>
+    <label for="inHab1">HTML</label>
+    <input type="checkbox" name="inHab1" id="Hab1" value="HTML" />
+    <label for="inHab2">CSS</label>
+    <input type="checkbox" name="inHab2" id="Hab2" value="CSS" />
+    <label for="inHab3">JavaScript</label>
+    <input type="checkbox" name="inHab3" id="Hab3" value="JavaScript" />
+    <br />
+    <input type="submit" value="Cadastrar" />
+  </form>
+</body>
+
+<script>
+  function getValues(e) {
+    e.preventDefault();
+
+    let nome = document.getElementById("inNome").value;
+    let sobrenome = document.getElementById("inSobrenome").value;
+    let ec = document.querySelector("input[name='inEC']:checked").value;
+    let hab1 = document.getElementById("Hab1").checked;
+    let hab2 = document.getElementById("Hab2").checked;
+    let hab3 = document.getElementById("Hab3").checked;
+
+    alert(
+      `Nome: ${nome} ${sobrenome}\nEstado Civil: ${ec}\nHabilidades: ${hab1} ${hab2} ${hab3}`
+    );
+  }
+</script>
+
+<style>
+  body {
+    background: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+
+  form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+
+  input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background: #555;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline-block;
+    margin: 0;
+    margin-right: 5px;
+    padding: 0;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+  }
+</style>
+
+</html>

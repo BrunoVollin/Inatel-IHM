@@ -1,0 +1,100 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("https://cdn.shopify.com/s/files/1/0408/8473/articles/header_10-barbearias_b99bc3d5-2ed1-435e-a2ee-bf091ba5c0ac.jpg?v=1568418224");
+  /* repeat bg down */
+  background-repeat: repeat-y;
+  /* bg image fixed */
+  background-attachment: fixed;
+  /* bg image centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.principal {
+  background: rgb(255, 255, 255);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  /* não espremer a imagem */
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  width: 80%;
+  text-align: justify;
+}
+
+em strong {
+  color: red;
+}
+
+#missao {
+  font-size: 20px;
+}
+
+.beneficios {
+  background: #ffffff;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -99999;
+  height: max-content;
+  
+  background-color: black;
+}
+.beneficios h2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.6rem;
+/* shadow smooth */
+  text-shadow: 0 0 10px #00000087;
+  
+
+
+}
+
+ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  color: #ffffff;
+  margin-bottom: 200px;
+}
+
+.itens {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.img-beneficios {
+  background-image: url("beneficios.jpg");
+  width: 50%;
+  border-radius: 10px;
+  display:flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+}
